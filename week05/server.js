@@ -37,6 +37,7 @@ ${this.bodyText}`
     return new Promise((resolve, reject) => {
       const parser = new ResponseParser()
       if (connection) {
+        console.log(this.toString(),'this.toString()','123')
         connection.write(this.toString())
       } else {
         connection = net.createConnection(
@@ -45,6 +46,7 @@ ${this.bodyText}`
             port: this.port,
           },
           () => {
+            console.log(this.toString())
             connection.write(this.toString())
           }
         )
@@ -218,5 +220,5 @@ void (async function () {
   })
 
   let response = await request.send()
-  console.log(response)
+  // console.log(response)
 })()

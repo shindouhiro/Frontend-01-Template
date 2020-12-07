@@ -1,0 +1,1 @@
+const Cls = <Cls attr="123" />

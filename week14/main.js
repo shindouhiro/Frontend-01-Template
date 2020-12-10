@@ -1,10 +1,11 @@
 function create(Cls, attr) {
+    console.log(arguments)
+
     let o = new Cls()
     for (let name in attr) {
         o[name] = attr[name]
     }
     return o
-    // console.log(arguments)
 }
 class Div {
 

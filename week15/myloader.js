@@ -37,7 +37,6 @@ module.exports = function (source, map) {
         return ${visit(template)}
       }
       mountTo(parent) {
-          console.log(parent,'111111')
         this.render().mountTo(parent);
       }
     }
